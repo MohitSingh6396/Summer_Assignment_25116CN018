@@ -1,16 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-int sum(int n){
+int sumofdigit(int n){
     int sum=0;
-    for(int i=1;i<=n;i++){
-        sum=sum+i;
+    while(n>0){
+       int lastdigit=n%10;
+        sum=sum+lastdigit;
+        n=n/10; 
     }
     return sum;
 }
 int main(){
     int n;
     cin>>n;
-    sum(n);
-    cout<<sum(n)<<endl;
+    sumofdigit(n);
+    cout<< sumofdigit(n)<<endl;
     return 0;
+
 }
