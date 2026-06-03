@@ -1,17 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
+void fibonacci(int n){
+    int a=0,b=1,next;
+    for(int i=0;i<n;i++){
+        cout<<a<<" ";
+        next=a+b;
+        a=b;
+        b=next;
+
+    }
+    
+}
 int main(){
     int n;
     cin>>n;
-    int cnt=0;
-    for(int i=1;i<=n;i++){
-        if(n%i==0){
-            cnt++;
-        }
-    }
-    if(cnt==2)
-    cout<<"prime"<<endl;
-    else
-    cout<<"not prime"<<endl;
+    fibonacci(n);
     return 0;
 }
