@@ -1,18 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-int sumofdigit(int n){
-    int sum=0;
-    while(n>0){
-        int lstdigit=n%10;
-        sum=sum+lstdigit;
-        n=n/10;
+void pattern(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=i;j++){
+           char ch=('A'+i-1);
+            cout<<ch;
+        }
+        cout<<endl;
     }
-    return sum;
 }
 int main(){
     int n;
     cin>>n;
-    sumofdigit(n);
-    cout<<sumofdigit(n)<<endl;
+    pattern(n);
     return 0;
 }

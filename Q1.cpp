@@ -1,14 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-int factorial(int n){
-    if(n==1)
-    return 1;
-    return n*factorial(n-1);
+void pattern(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=n;j>=i;j--){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
 }
+
 int main(){
     int n;
     cin>>n;
-    factorial(n);
-    cout<<factorial(n)<<endl;
+    pattern(n);
     return 0;
 }

@@ -1,19 +1,17 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int fibonacci(int n) {
-    if (n <= 1)
-        return n;
-    int a = 0, b = 1;
-    for (int i = 2; i <= n; i++) {
-        int c = a + b;
-        a = b;
-        b = c;
+void pattern(int n){
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n+1-i;j++){
+            cout<<j;
+        }
+        cout<<endl;
     }
-    return b;
 }
-int main() {
+
+int main(){
     int n;
-    cin >> n;
-    cout << fibonacci(n) << endl;
+    cin>>n;
+    pattern(n);
     return 0;
 }
